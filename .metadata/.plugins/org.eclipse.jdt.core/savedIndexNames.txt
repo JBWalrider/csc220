@@ -1,0 +1,2 @@
+INDEX VERSION 1.127+C:\Users\Jan\Documents\University of Miami\22_CSC_220_4H_Nelson_Dellis\Lab Assignments\.metadata\.plugins\org.eclipse.jdt.core
+3771541681.index
