@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_aicW8aVVEeiqLL18nQdBmg" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_aicW8qVVEeiqLL18nQdBmg" bindingContexts="_aicW9KVVEeiqLL18nQdBmg">
-  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;CoinFlipExperiment.java&quot; tooltip=&quot;Lab01/src/lab01/CoinFlipExperiment.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Lab01/src/lab01/CoinFlipExperiment.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;test_class.java&quot; tooltip=&quot;TestProject/test_class.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/TestProject/test_class.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
+  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;SumExperiment.java&quot; tooltip=&quot;Lab01/src/lab01/SumExperiment.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Lab01/src/lab01/SumExperiment.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;CoinFlipExperiment.java&quot; tooltip=&quot;Lab01/src/lab01/CoinFlipExperiment.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Lab01/src/lab01/CoinFlipExperiment.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;test_class.java&quot; tooltip=&quot;TestProject/test_class.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/TestProject/test_class.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <tags>ModelMigrationProcessor.001</tags>
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_aicW8qVVEeiqLL18nQdBmg" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_cZYDY6VVEeiqLL18nQdBmg" label="%trimmedwindow.label.eclipseSDK" x="98" y="4" width="1024" height="768">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_aicW8qVVEeiqLL18nQdBmg" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_cZYDY6VVEeiqLL18nQdBmg" label="%trimmedwindow.label.eclipseSDK" x="0" y="0" width="1024" height="768">
     <persistedState key="coolBarVisible" value="true"/>
     <persistedState key="perspectiveBarVisible" value="true"/>
     <persistedState key="workingSets" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workingSets/>"/>
@@ -147,13 +147,19 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_ecM2wKVVEeiqLL18nQdBmg" elementId="org.eclipse.ui.editorss" selectedElement="_ecM2waVVEeiqLL18nQdBmg">
-      <children xsi:type="basic:PartStack" xmi:id="_ecM2waVVEeiqLL18nQdBmg" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_c3qBUKZGEeiMB-_vh9pPBg">
+      <children xsi:type="basic:PartStack" xmi:id="_ecM2waVVEeiqLL18nQdBmg" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_cXnnoKZMEeiiu7Uv_FrhWw">
         <tags>newtablook</tags>
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
         <tags>active</tags>
         <children xsi:type="basic:Part" xmi:id="_c3qBUKZGEeiMB-_vh9pPBg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="CoinFlipExperiment.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.gif" closeable="true">
           <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;CoinFlipExperiment.java&quot; partName=&quot;CoinFlipExperiment.java&quot; title=&quot;CoinFlipExperiment.java&quot; tooltip=&quot;Lab01/src/lab01/CoinFlipExperiment.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Lab01/src/lab01/CoinFlipExperiment.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;297&quot; selectionTopPixel=&quot;15&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_cXnnoKZMEeiiu7Uv_FrhWw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="SumExperiment.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;SumExperiment.java&quot; partName=&quot;SumExperiment.java&quot; title=&quot;SumExperiment.java&quot; tooltip=&quot;Lab01/src/lab01/SumExperiment.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Lab01/src/lab01/SumExperiment.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;968&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
           <tags>removeOnHide</tags>
@@ -280,7 +286,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_dBkEwKVVEeiqLL18nQdBmg" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_8R_BlqZDEeiMB-_vh9pPBg" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_asRCN6VVEeiqLL18nQdBmg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_Gn-EVqZMEeiiu7Uv_FrhWw" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_asRCN6VVEeiqLL18nQdBmg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_dBkEwaVVEeiqLL18nQdBmg" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -307,7 +313,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_dBl58KVVEeiqLL18nQdBmg" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_8SR8hKZDEeiMB-_vh9pPBg" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_asRB66VVEeiqLL18nQdBmg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_GoH1WaZMEeiiu7Uv_FrhWw" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_asRB66VVEeiqLL18nQdBmg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_dBl58aVVEeiqLL18nQdBmg" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>

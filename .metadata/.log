@@ -305,3 +305,53 @@ org.eclipse.recommenders.utils.Logs$LogTraceException
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+!SESSION 2018-08-22 16:43:48.907 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_111
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-08-22 16:44:16.548
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Jan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.discovery 4 0 2018-08-22 16:56:57.832
+!MESSAGE Unexpected error while verifying site availability: Unable to read repository at https://download.ctrlflow.com/connect/updates/discovery/stable/content.jar.
+!STACK 0
+java.util.concurrent.ExecutionException: org.eclipse.core.runtime.CoreException: Unable to read repository at https://download.ctrlflow.com/connect/updates/discovery/stable/content.jar.
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at org.eclipse.equinox.internal.p2.discovery.compatibility.SiteVerifier.verifySiteAvailability(SiteVerifier.java:77)
+	at org.eclipse.equinox.internal.p2.ui.discovery.wizards.CatalogViewer$7.run(CatalogViewer.java:604)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: org.eclipse.core.runtime.CoreException: Unable to read repository at https://download.ctrlflow.com/connect/updates/discovery/stable/content.jar.
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.getLastModified(RepositoryTransport.java:236)
+	at org.eclipse.equinox.internal.p2.discovery.compatibility.util.TransportUtil.verifyAvailability(TransportUtil.java:135)
+	at org.eclipse.equinox.internal.p2.discovery.compatibility.SiteVerifier$VerifyUpdateSiteJob.call(SiteVerifier.java:135)
+	at org.eclipse.equinox.internal.p2.discovery.compatibility.SiteVerifier$VerifyUpdateSiteJob.call(SiteVerifier.java:1)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: javax.net.ssl.SSLException: hostname in certificate didn't match: <download.ctrlflow.com> != <*.your-server.de> OR <*.your-server.de> OR <your-server.de>
+	at org.apache.http.conn.ssl.AbstractVerifier.verify(AbstractVerifier.java:238)
+	at org.apache.http.conn.ssl.BrowserCompatHostnameVerifier.verify(BrowserCompatHostnameVerifier.java:54)
+	at org.apache.http.conn.ssl.AbstractVerifier.verify(AbstractVerifier.java:159)
+	at org.apache.http.conn.ssl.AbstractVerifier.verify(AbstractVerifier.java:140)
+	at org.apache.http.conn.ssl.SSLSocketFactory.verifyHostname(SSLSocketFactory.java:561)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:536)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:403)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:177)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:259)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
