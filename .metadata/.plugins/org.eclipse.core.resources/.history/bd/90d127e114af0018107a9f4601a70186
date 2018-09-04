@@ -62,9 +62,9 @@ public class Matrix {
                     }
                 }
             }
-            return true;
         }
-		return false; // placeholder
+        else return false;
+		return true; // placeholder
 	}
 
 	public Matrix times(Matrix m)
@@ -82,9 +82,9 @@ public class Matrix {
                     n.data[i][j] = t;
                 }
             }
-            return n;
         }
-        return null;
+        else return null;
+        return n;
     }	
 
 	
@@ -97,8 +97,8 @@ public class Matrix {
                     n.data[i][j] += m.data[i][j];
                 }
             }
-            return n;
         }
-        return null;
+        else return null;
+        return n;
 	}	
 }
