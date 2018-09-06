@@ -103,11 +103,11 @@ public class Library {
    */
   public String lookup(long isbn) {
     // *FILL IN -- do not return null unless appropriate
-	  for (LibraryBook b : library) {
-		  if (isbn == b.getIsbn()) {
-			  return b.getHolder();
-		  }
-	  }
+	for (LibraryBook b : library) {
+		if (isbn == b.getIsbn()) {
+		    return b.getHolder();
+	    }
+	}
     return null;
   }
 
@@ -153,8 +153,17 @@ public class Library {
    *          holder whose checked out books are returned
    */
   public ArrayList<LibraryBook> lookup(String holder) {
-    // FILL IN -- do not return null
-	  return null;
+    ArrayList<LibraryBook> l = new ArrayList<LibraryBook>();
+    if (library.size() != 0) {
+        for (LibraryBook b : this.library) {
+            if (b.getHolder() != null) {
+                if (b.getHolder().equals(holder)) {
+                    l.add(b);
+                }
+            }
+        }
+    }
+    return l;
   }  
 
   /**
@@ -168,8 +177,15 @@ public class Library {
    */
   public boolean checkin(long isbn) {
     // FILL IN -- do not return false unless appropriate
-
-	  return false;
+    for (LibraryBook b : library) {
+        if (b.getIsbn() == isbn) {
+            if (b.getHolder() != null && b.getDueDate() != null) {
+                b.checkin();
+                return true;
+            }
+        }
+    }
+    return false;
   }
 
   /**
@@ -183,7 +199,13 @@ public class Library {
    */
   public boolean checkin(String holder) {
 	    // *FILL IN -- do not return false unless appropriate	
-
-	  return false;
+    ArrayList<LibraryBook> l = this.lookup(holder);
+    if (l.size() != 0) {
+        for (LibraryBook b : l) {
+            b.checkin();
+        }
+        return true;
+    }
+return false;
   }
 }
