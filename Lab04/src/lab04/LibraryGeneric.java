@@ -259,12 +259,17 @@ public class LibraryGeneric<Type> {
   /**
    * Returns the list of library books, sorted by author
    */
-  /*
   public ArrayList<LibraryBookGeneric<Type>> getOrderedByAuthor() {
-    // FILL IN -- do not return null
-    return null;	  
+    ArrayList<LibraryBookGeneric<Type>> libraryCopy = new ArrayList<LibraryBookGeneric<Type>>();
+    libraryCopy.addAll(library);
+
+    OrderByAuthor comparator = new OrderByAuthor();
+
+    sort(libraryCopy, comparator);
+
+    return libraryCopy;
   }
-  */
+  
 
   /**
    * Returns the list of library books whose due date is older than the input
@@ -272,33 +277,40 @@ public class LibraryGeneric<Type> {
    *
    * If no library books are overdue, returns an empty list.
    */
-  /*
   public ArrayList<LibraryBookGeneric<Type>> getOverdueList(int month, int day,
       int year) {
-    // FILL IN -- do not return null
+    ArrayList<LibraryBookGeneric<Type>> libraryCopy = new ArrayList<LibraryBookGeneric<Type>>();
+    GregorianCalendar c = new GregorianCalendar(year, month, day);
+    for (LibraryBookGeneric<Type> b : library) {
+    	if (b.getDueDate() != null) {
+    		if (b.getDueDate().compareTo(c)<0) {libraryCopy.add(b);}
+    	}
+    }
+    OrderByDueDate comparator = new OrderByDueDate();
+
+    sort(libraryCopy, comparator);
+
+    return libraryCopy;
   }
-  */
 
  /**
    * Comparator that defines an ordering among library books using the author,  and book title as a tie-breaker.
    */
-  /*
   protected class OrderByAuthor implements 
 Comparator<LibraryBookGeneric<Type>> {
-
-    // FILL IN - write the compare method
+    public int compare (LibraryBookGeneric element1, LibraryBookGeneric element2) {
+        return element1.getAuthor().compareTo(element2.getAuthor());
+    }
   }
-  */
 
   /**
    * Comparator that defines an ordering among library books using the due date.
    */
-  /*
   protected class OrderByDueDate implements Comparator<LibraryBookGeneric<Type>> {
-
-    // FILL IN - write the compare method
+ 	public int compare (LibraryBookGeneric element1, LibraryBookGeneric element2) {
+        return element1.getDueDate().compareTo(element2.getDueDate());
+    } 
    	  
   }
-  */
 
 }

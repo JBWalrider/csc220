@@ -46,7 +46,7 @@ public class LibraryGenericTest {
     lib2.add(9780374292799L, "Thomas L. Friedman", "The World is Flat");
     lib2.add(9780330351690L, "Jon Krakauer", "Into the Wild");
     lib2.add(9780546580342L, "David Baldacci", "Simple Genius");
-     
+    
     PhoneNumber patron2 = new PhoneNumber("305.555.1234");
          
     if (!lib2.checkout(9780330351690L, patron2, 1, 1, 2008))
@@ -77,6 +77,6 @@ public class LibraryGenericTest {
     //LibraryGeneric<String> lib3 = new LibraryGeneric<String>();    
     //lib3.addAll("Mushroom_Publishing.txt");
     
-    // FILL IN for tests    
+    // FILL IN for tests       
   }
 }
