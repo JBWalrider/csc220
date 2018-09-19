@@ -1,0 +1,14 @@
+package lab05;
+
+public class BinarySearchSetTester {
+
+	public static void main(String[] args) {
+		BinarySearchSet b = new BinarySearchSet();
+		System.out.print("test_create");
+		if (b.isEmpty()) System.out.print("test_empty");
+		
+		
+
+	}
+
+}
