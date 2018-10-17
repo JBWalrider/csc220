@@ -1,0 +1,82 @@
+package lab07;
+
+import java.util.Stack;
+
+public class Postfixer {
+	public static double InfixEvaluator(String line) {
+		StringSplitter data = new StringSplitter(line);
+		Stack<String> operators = new Stack<String>();
+		Stack<Double> operands = new Stack<Double>();    //double: decimal point doesn't count as a special character
+		while (data.hasNext()) {
+			String s = data.next();
+			if (s.equals("(")) {operators.push(s);}
+			else if (s.equals(")")) {
+				while (!operators.peek().equals("(")) {
+					double d1 = operands.pop();
+					double d2 = operands.pop();
+					String s1 = operators.pop();
+					switch (s1) {
+						case "+": {operands.push(d2+d1); break;}
+						case "-": {operands.push(d2-d1); break;}
+						case "*": {operands.push(d2*d1); break;}
+						case "/": {operands.push(d2/d1); break;}
+						case "^": {operands.push(Math.pow(d2, d1)); break;}
+						default: {System.out.println("you fucked up 1");}
+					}
+				}
+				operators.pop();
+			}
+			else if (data.SPECIAL_CHARACTER.contains(s)) {
+				while (!operators.empty() && data.SPECIAL_CHARACTER.indexOf(operators.peek()) > data.SPECIAL_CHARACTER.indexOf(s)) {
+					double d1 = operands.pop();
+					double d2 = operands.pop();
+					String s1 = operators.pop();
+					switch (s1) {
+						case "+": {operands.push(d2+d1); break;}
+						case "-": {operands.push(d2-d1); break;}
+						case "*": {operands.push(d2*d1); break;}
+						case "/": {operands.push(d2/d1); break;}
+						case "^": {operands.push(Math.pow(d2, d1)); break;}
+						default: {System.out.println("you fucked up 2");}
+					}
+				}
+				operators.push(s);
+			}
+			else {operands.push(Double.parseDouble(s));}
+			while (!operators.empty()) {
+				double d1 = operands.pop();
+				double d2 = operands.pop();
+				String s1 = operators.pop();
+				switch (s1) {
+					case "+": {operands.push(d2+d1); break;}
+					case "-": {operands.push(d2-d1); break;}
+					case "*": {operands.push(d2*d1); break;}
+					case "/": {operands.push(d2/d1); break;}
+					case "^": {operands.push(Math.pow(d2, d1)); break;}
+					default: {System.out.println("you fucked up 3");}
+				}
+			}
+		}
+		if (!operators.empty()) {System.out.println("you fucked up 4");}
+		return operands.pop();
+	}
+	public static void main(String[]a) {
+        if (InfixEvaluator("10 + 2") != 12)
+            System.err.println("test1 failed --> your answer should have been 12");
+        
+        if (InfixEvaluator("10 - 2") != 8)
+            System.err.println("test1 failed --> your answer should have been 12");
+        
+        if (InfixEvaluator("100 * 2 + 12") != 212)
+            System.err.println("test2 failed --> your answer should have been 212");
+        
+        if (InfixEvaluator("100 * ( 2 + 12 )") != 1400)
+            System.err.println("test3 failed --> your answer should have been 1400");
+        
+        if (InfixEvaluator("100 * ( 2 + 12 ) / 14") != 100)
+            System.err.println("test4 failed --> your answer should have been 100");
+        
+        System.out.println("Testing Done!!!");
+
+	}
+}
